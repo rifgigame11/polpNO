@@ -1,6 +1,6 @@
 <html manifest="cache.appcache">
 <head>
-<title>mansoor0x · PS4 Exploit</title>
+<title>RIFGI PLAY GAME · PS4 Exploit</title>
 <style>
 body {
     background-color: #ffffff;
@@ -19,6 +19,13 @@ body {
     color: #111111;
     transform: translate(-50%, -50%);
 }
+.info img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+}
 </style>
 <script>
 history.replaceState(null, null, 'index.html');
@@ -27,12 +34,12 @@ history.go(-histlength);
 
 function DLProgress(e) {
     var pct = Math.round(e.loaded / e.total * 100);
-    msgs.innerHTML = "mansoor0x &middot; Installing ... " + pct + "%";
+    msgs.innerHTML = "RIFGI PLAY GAME &middot; Installing ... " + pct + "%";
 }
 
 function DisplayCacheProgress() {
     setTimeout(function () {
-        msgs.innerHTML = "mansoor0x &middot; Cache OK";
+        msgs.innerHTML = "RIFGI PLAY GAME &middot; Cache OK";
     }, 2000);
     setTimeout(function () {
         location.reload();
@@ -45,6 +52,6 @@ window.applicationCache.onupdateready = function (e) { DisplayCacheProgress(); }
 </script>
 </head>
 <body>
-<div id="msgs" class="info"></div>
+<div class="info"><img src="logo.png" alt="" width="64" height="64"><div id="msgs"></div></div>
 </body>
 </html>

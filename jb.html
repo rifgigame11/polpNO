@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>MANSOOR0X // NVS</title>
+    <title>RIFGI PLAY GAME // NVS</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
 
@@ -79,27 +79,52 @@
       }
 
       #brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
         font-weight: 900;
-        font-size: 24px;
+        font-size: 22px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         margin-bottom: 40px;
+        transition: all 0.5s var(--ease);
+      }
+
+      #brand img {
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+      }
+
+      #brand span {
         background: linear-gradient(to bottom right, #ffffff, #8b9bb4);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: all 0.5s var(--ease);
       }
 
       body.done #brand {
         filter: drop-shadow(0 0 15px var(--color-ok));
+      }
+
+      body.done #brand span {
         background: var(--color-ok);
         -webkit-background-clip: text;
+        background-clip: text;
       }
 
       body.fail #brand {
         filter: drop-shadow(0 0 15px var(--color-fail));
+      }
+
+      body.fail #brand span {
         background: var(--color-fail);
         -webkit-background-clip: text;
+        background-clip: text;
       }
 
       #visual-indicator {
@@ -234,7 +259,7 @@
   <body>
 
     <div id="main-container">
-        <div id="brand">MANSOOR0X</div>
+        <div id="brand"><img src="logo.png" alt="RIFGI PLAY GAME" width="36" height="36"><span>RIFGI PLAY GAME</span></div>
         <div id="visual-indicator">
             <div id="spin"></div>
             <div class="pulse"></div>
@@ -249,7 +274,7 @@
       <div id="out"></div>
     </div>
 
-    <div id="footer">MANSOOR0X // NVS_CORE</div>
+    <div id="footer">RIFGI PLAY GAME // NVS_CORE</div>
 
     <script type="module">
       import "./jb.js?v=10";
